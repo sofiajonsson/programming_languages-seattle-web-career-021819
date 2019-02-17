@@ -14,12 +14,12 @@ end
 def reformat_languages(languages)
   new_hash = {}
   languages.each do |style, language|
-    language.each do |language_name, attribute|
-      if new_hash[language_name] == nil
-          new_hash[language_name] = attribute
+    language.each do |name, attribute|
+      if new_hash[name] == nil
+          new_hash[name] = attribute
         end
-      new_hash[language_name][:style] = []
-      new_hash[language_name][:style] << style
+      new_hash[name][:style] = []
+      new_hash[name][:style] << style
     end
   end
   new_hash[:javascript][:style] << :oo
